@@ -1,11 +1,13 @@
 package myPackage.j1basics;
 
 public class ArrayRotation {
-    public static void reverseArray(int[] x, int start, int end){
-        for (int i = start; i <= end-1 ; i++) {
-            int temp = x[end];
-            x[end--] = x[start];
-            x[start++] = temp;
+    static void reverseArray(int[] arr, int left, int right) {
+        while (left < right) {
+            int temp = arr[right];
+            arr[right] = arr[left];
+            arr[left] = temp;
+            left++;
+            right--;
         }
     }
 
@@ -14,9 +16,13 @@ public class ArrayRotation {
         int k = 3;
         //O(n)
         // int temp = 0;
-        reverseArray(arr,0,arr.length-k-1);
-        reverseArray(arr,arr.length-k,arr.length-1);
-        reverseArray(arr,0,arr.length-1);
+        if (k > arr.length && k % arr.length != 0)
+            k = k % arr.length;
+        else if (k % arr.length == 0)
+            k = arr.length;
+        reverseArray(arr, 0, arr.length - 1);
+        reverseArray(arr, 0, k - 1);
+        reverseArray(arr, k, arr.length - 1);
 
         //O(n^2)
         /*for (int i = 1; i <= k; i++) {
