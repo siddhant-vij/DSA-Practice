@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SearchSortedRotated {
-  
+
   static int minimumBinary(int[] arr, int start, int end) {
     if (start > end)
       return -1;
@@ -51,8 +51,6 @@ public class SearchSortedRotated {
 
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
-      // int x = sc.nextInt();
-      // System.out.println(x ^ (x >> 1));
       int n = sc.nextInt();
       ArrayList<Integer> arr = new ArrayList<>();
       for (int i = 0; i < n; i++) {
