@@ -8,7 +8,7 @@
 1. [Maths](./src/myPackage/j2maths/)
 1. [Bitwise](./src/myPackage/j3bitwise/)
 1. [Recursion](./src/myPackage/j4recursion/)
-1. Array
+1. [Arrays](./src/myPackage/j5Arrays/)
 1. Searching
 1. Sorting
 1. Matrix
