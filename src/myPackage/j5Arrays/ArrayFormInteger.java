@@ -3,6 +3,7 @@
 package myPackage.j5Arrays;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,13 +12,14 @@ public class ArrayFormInteger {
   static List<Integer> addToArrayForm(int[] num, int k) {
     List<Integer> arrL = new ArrayList<>();
     for (int i = num.length - 1; i >= 0; i--) {
-      arrL.add(0, (num[i] + k) % 10);
+      arrL.add((num[i] + k) % 10);
       k = (num[i] + k) / 10;
     }
     while (k > 0) {
-      arrL.add(0, k % 10);
+      arrL.add(k % 10);
       k /= 10;
     }
+    Collections.reverse(arrL);
     return arrL;
   }
 
