@@ -15,20 +15,19 @@ public class CountSubArraysLessSum {
 
   static int countSubArraysFast(int[] arr, int k) {
     int start = 0, end = 0;
-    int count = 0, sum = 0;
+    int count = 0, sum = arr[0];
     int n = arr.length;
-    while (end < n) {
-      if (sum + arr[end] < k) {
-        sum += arr[end];
+    while (start < n && end < n) {
+      System.out.println(start + " " + end + " " + sum + " " + count);
+      if (sum < k) {
         end++;
-        count += end - start;
+        if (end >= start)
+          count += end - start;
+        if (end < n)
+          sum += arr[end];
       } else {
-        if (sum == 0)
-          end++;
-        else {
-          sum -= arr[start];
-          start++;
-        }
+        sum -= arr[start];
+        start++;
       }
     }
     return count;
