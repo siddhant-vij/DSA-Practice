@@ -6,6 +6,24 @@ import java.util.Scanner;
 
 public class MinSizeSubarraySum {
 
+  static int minSubArrayLen(int target, int[] nums) {
+    int s = 0;
+    int e = 0;
+    int sum = 0;
+    int minLength = Integer.MAX_VALUE;
+    while (e < nums.length) {
+      if (!(sum + nums[e] >= target)) {
+        sum += nums[e];
+        e++;
+      } else {
+        minLength = Math.min(minLength, e - s + 1);
+        sum -= nums[s];
+        s++;
+      }
+    }
+    return minLength == Integer.MAX_VALUE ? 0 : minLength;
+  }
+
   static int minSubArrayLen(int[] nums, int target) {
     int n = nums.length;
     int left = 0;
@@ -30,6 +48,7 @@ public class MinSizeSubarraySum {
       }
       int target = sc.nextInt();
       System.out.println(minSubArrayLen(arr, target));
+      System.out.println(minSubArrayLen(target, arr));
     }
   }
 }
