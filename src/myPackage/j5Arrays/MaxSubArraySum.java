@@ -22,6 +22,7 @@ public class MaxSubArraySum {
       if (sum + C[end] <= B) {
         sum += C[end];
         max = Math.max(max, sum);
+        end++;
       } else {
         if (sum == 0) {
           end++;
@@ -32,7 +33,6 @@ public class MaxSubArraySum {
           continue;
         }
       }
-      end++;
     }
     return max;
   }
