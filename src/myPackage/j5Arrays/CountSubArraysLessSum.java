@@ -13,12 +13,25 @@ import java.util.Scanner;
 
 public class CountSubArraysLessSum {
 
+  static int countSubArraysFastII(int[] arr, int k) {
+    int start = 0, end = 0;
+    int count = 0, sum = 0;
+    int n = arr.length;
+    while (end < n) {
+      sum += arr[end];
+      while (sum >= k)
+        sum -= arr[start++];
+      count += end - start + 1;
+      end++;
+    }
+    return count;
+  }
+
   static int countSubArraysFast(int[] arr, int k) {
     int start = 0, end = 0;
     int count = 0, sum = arr[0];
     int n = arr.length;
     while (start < n && end < n) {
-      System.out.println(start + " " + end + " " + sum + " " + count);
       if (sum < k) {
         end++;
         if (end >= start)
@@ -57,6 +70,7 @@ public class CountSubArraysLessSum {
       int B = sc.nextInt();
       System.out.println(countSubArraysSlow(arr, B));
       System.out.println(countSubArraysFast(arr, B));
+      System.out.println(countSubArraysFastII(arr, B));
     }
   }
 }
