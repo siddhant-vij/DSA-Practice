@@ -1,6 +1,5 @@
 # Java DSA Practice
 
-
 ## Topics
 
 1. [Java](./src/myPackage/j1basics/)
@@ -10,7 +9,7 @@
 1. [Arrays](./src/myPackage/j5Arrays/)
 1. Searching
 1. Sorting
-1. Matrix
+1. [Matrix](./src/myPackage/j8Matrix/)
 1. Hashing
 1. Strings
 1. Linked List

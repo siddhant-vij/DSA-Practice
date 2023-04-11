@@ -1,6 +1,6 @@
 // Leetcode: 54 Spiral Matrix
 
-package myPackage.j1basics;
+package myPackage.j8Matrix;
 
 import java.util.ArrayList;
 import java.util.List;

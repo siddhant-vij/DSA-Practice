@@ -1,6 +1,6 @@
 // Leetcode: 885 - Spiral Matrix III
 
-package myPackage.j1basics;
+package myPackage.j8Matrix;
 
 import java.util.Arrays;
 import java.util.Scanner;
