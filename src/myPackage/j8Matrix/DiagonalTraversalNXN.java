@@ -8,7 +8,7 @@ package myPackage.j8Matrix;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DiagonalTraversal {
+public class DiagonalTraversalNXN {
 
   static int[] diagonalAlternate_NxN(int[][] A) {
     if (A == null || A.length == 0) {
