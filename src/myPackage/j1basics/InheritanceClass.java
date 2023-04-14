@@ -31,9 +31,7 @@ public class InheritanceClass {
         Employee emp = new Employee(265000,"Test Employee");
         System.out.println("Employee Name: " + emp.getName());
         System.out.println("Total Employee Salary: " + emp.getSalary());
-
         System.out.println();
-
         Manager man = new Manager(350000,"Test Manager",60000);
         System.out.println("Manager Name: " + man.getName());
         System.out.println("Total Manager Salary: " + (man.getSalary()+man.getBonus()));

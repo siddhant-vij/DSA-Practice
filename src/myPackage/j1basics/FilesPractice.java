@@ -8,7 +8,6 @@ package myPackage.j1basics;
 
 public class FilesPractice {
     public static void main(String[] args) {
-
         // Code to create a folder, if it doesn't exist
         /*File directory = new File("Tables");
         if (!directory.exists()){

@@ -80,6 +80,7 @@ public class ErrorsExceptions {
         marks[1] = 56;
         marks[2] = 6;
         Validations v = new Validations();
+        
         try (Scanner sc = new Scanner(System.in)) {
             String ind;
             boolean flagLevel1 = true;
