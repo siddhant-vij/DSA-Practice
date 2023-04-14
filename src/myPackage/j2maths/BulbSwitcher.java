@@ -46,5 +46,4 @@ public class BulbSwitcher {
       System.out.println(bulbSwitch(n));
     }
   }
-
 }

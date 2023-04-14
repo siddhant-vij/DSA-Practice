@@ -31,6 +31,5 @@ public class SquareRoot {
       System.out.println(sqrtIterative(N));
       System.out.println(sqrtRecursive(N,1L,N));
     }
-  }
-  
+  }  
 }

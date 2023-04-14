@@ -43,6 +43,5 @@ public class MagicNumber {
       System.out.println(binaryToMagic(decimalToBinary(N)));
       System.out.println(MagicNumberMethod(N));
     }
-  }
-  
+  }  
 }

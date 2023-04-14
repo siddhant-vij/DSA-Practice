@@ -23,6 +23,5 @@ public class CountFactors {
       int x = sc.nextInt();
       System.out.println(solve(x));
     }
-  }
-  
+  }  
 }

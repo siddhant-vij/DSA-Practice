@@ -40,8 +40,7 @@ public class PowerAndUnderModulo {
       x = (x*x)%m;
     }
     return result;
-  }
-  
+  }  
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
       int x = sc.nextInt();
