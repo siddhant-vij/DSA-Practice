@@ -59,6 +59,5 @@ public class MinimumCookingTime {
         System.out.println(minCookTime(rank, m));
       }
     }
-  }
-  
+  }  
 }

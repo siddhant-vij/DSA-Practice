@@ -19,6 +19,5 @@ public class isArraySorted {
       }
       System.out.println(isSorted(arr,0));
     }
-  }
-  
+  }  
 }

@@ -53,6 +53,5 @@ public class FamilyStructure {
         System.out.println(kthChildNthGeneration(N,K));
       }
     }
-  }
-  
+  }  
 }

@@ -59,6 +59,5 @@ public class SearchSortedRotated {
       int k = sc.nextInt();
       System.out.println(findPosition(arr, arr.size(), k));
     }
-  }
-  
+  }  
 }

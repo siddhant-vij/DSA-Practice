@@ -1,7 +1,6 @@
 package myPackage.j4recursion;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class RecursionBasicsTest {

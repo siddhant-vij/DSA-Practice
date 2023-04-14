@@ -65,6 +65,5 @@ public class MinSortedRotatedArray {
       System.out.println(minimumLinear(arr));
       System.out.println(minimumBinary(arr,0,arr.length-1));
     }
-  }
-  
+  }  
 }
