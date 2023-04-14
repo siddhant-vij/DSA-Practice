@@ -1,4 +1,4 @@
-package myPackage.j2Maths;
+package myPackage.j2maths;
 
 public class Josephus {
     public static int josephus(int n, int k){

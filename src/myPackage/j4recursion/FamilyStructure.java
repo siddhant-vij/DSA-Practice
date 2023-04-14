@@ -13,7 +13,7 @@
 // Output: Female
 
 
-package myPackage.j4Recursion;
+package myPackage.j4recursion;
 
 import java.util.Scanner;
 

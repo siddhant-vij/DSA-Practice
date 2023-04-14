@@ -2,7 +2,7 @@
 // 1. Make a constructor private.
 // 2. Write a static method that has the return type object of this singleton class.
 
-package myPackage.j1Basics;
+package myPackage.j1basics;
 
 class Singleton {
   private static Singleton single_instance = null;

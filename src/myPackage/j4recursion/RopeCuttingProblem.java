@@ -8,7 +8,7 @@
 
 //Better solution using DP.
 
-package myPackage.j4Recursion;
+package myPackage.j4recursion;
 
 import java.util.*;
 

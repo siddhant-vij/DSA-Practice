@@ -1,6 +1,6 @@
 // Leetcode: 8 - String to Integer (atoi)
 
-package myPackage.j2Maths;
+package myPackage.j2maths;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
 // Leetcode: 1689 - Partitioning Into Minimum Number Of Deci-Binary Numbers
 
-package myPackage.j2Maths;
+package myPackage.j2maths;
 
 import java.util.Scanner;
 

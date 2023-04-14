@@ -1,4 +1,4 @@
-package myPackage.j4Recursion;
+package myPackage.j4recursion;
 
 import java.util.ArrayList;
 import java.util.Scanner;

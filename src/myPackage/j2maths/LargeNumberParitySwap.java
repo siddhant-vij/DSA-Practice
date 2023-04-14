@@ -1,6 +1,6 @@
 // Leetcode: 2231 Largest Number After Digit Swaps by Parity
 
-package myPackage.j2Maths;
+package myPackage.j2maths;
 
 import java.util.Arrays;
 import java.util.Collections;

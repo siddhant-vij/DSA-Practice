@@ -1,6 +1,6 @@
 // Leetcode 1752: Check if Array Is Sorted and Rotated
 
-package myPackage.j1Basics;
+package myPackage.j1basics;
 
 import java.util.Scanner;
 

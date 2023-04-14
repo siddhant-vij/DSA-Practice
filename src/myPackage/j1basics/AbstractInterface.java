@@ -1,4 +1,4 @@
-package myPackage.j1Basics;
+package myPackage.j1basics;
 
 abstract class Shape{
     private final int dim1;

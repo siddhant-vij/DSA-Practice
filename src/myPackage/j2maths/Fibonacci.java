@@ -1,4 +1,4 @@
-package myPackage.j2Maths;
+package myPackage.j2maths;
 
 public class Fibonacci {
     public static boolean isFibonacciSeries(int[] x){

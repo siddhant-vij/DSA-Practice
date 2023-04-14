@@ -1,7 +1,7 @@
 // Input: 354
 // Output: Three Five Four
 
-package myPackage.j4Recursion;
+package myPackage.j4recursion;
 
 import java.util.Scanner;
 

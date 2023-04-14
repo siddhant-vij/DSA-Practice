@@ -1,4 +1,4 @@
-package myPackage.j1Basics;
+package myPackage.j1basics;
 
 class MyThread1 extends Thread{
     private final int num;

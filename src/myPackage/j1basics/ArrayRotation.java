@@ -1,4 +1,4 @@
-package myPackage.j1Basics;
+package myPackage.j1basics;
 
 public class ArrayRotation {
     static void reverseArray(int[] arr, int left, int right) {
