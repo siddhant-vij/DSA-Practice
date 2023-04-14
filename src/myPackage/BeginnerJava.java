@@ -1,6 +1,6 @@
 package myPackage;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class BeginnerJava {
   public static void main(String[] args) {
