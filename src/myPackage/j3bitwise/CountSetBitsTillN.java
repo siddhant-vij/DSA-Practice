@@ -37,6 +37,5 @@ public class CountSetBitsTillN {
       System.out.println(countTotalSetBits(x));
       System.out.println(countTotalSetBitsEfficient(x));
     }
-  }
-  
+  }  
 }

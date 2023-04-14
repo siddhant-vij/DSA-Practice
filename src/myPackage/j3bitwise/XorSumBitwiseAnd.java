@@ -42,6 +42,5 @@ public class XorSumBitwiseAnd {
       System.out.println(XorSumOfBitwiseAnd(arr1, arr2));
       System.out.println(XorSumOfBitwiseAndEfficient(arr1, arr2));
     }
-  }
-  
+  }  
 }

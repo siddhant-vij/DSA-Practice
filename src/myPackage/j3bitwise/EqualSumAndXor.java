@@ -54,6 +54,5 @@ public class EqualSumAndXor {
       System.out.println(countValues(n));
       System.out.println(countValuesEfficient(n));
     }
-  }
-  
+  }  
 }
