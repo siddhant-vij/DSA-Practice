@@ -1,9 +1,9 @@
-package myPackage.j4recursion;
+package myPackage.j6Searching;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BinarySearch {
+public class BinarySearchRecursive {
 
   static boolean isPresentBinarySearch(int[] arr, int n, int start, int end){
     if(start > end)
