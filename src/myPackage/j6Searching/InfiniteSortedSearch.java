@@ -1,4 +1,4 @@
-// Siilar logic applies to the first and last occurences of an element in Infinite sized sorted array
+// Similar logic applies to the first and last occurences of an element in Infinite sized sorted array
 
 package myPackage.j6Searching;
 
