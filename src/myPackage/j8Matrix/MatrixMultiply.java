@@ -1,4 +1,4 @@
-package myPackage.j2maths;
+package myPackage.j8Matrix;
 
 public class MatrixMultiply {
     public static void main(String[] args) {
