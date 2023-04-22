@@ -1,8 +1,31 @@
+// Leetcode: 74 - Search a 2D Matrix
+
 package myPackage.j6Searching;
 
 import java.util.Arrays;
 
 public class SortedMatrixSearch {
+
+  static boolean searchMatrix(int[][] matrix, int target) {
+    if (matrix.length < 1 || matrix[0].length < 1)
+      return false;
+    if (target < matrix[0][0] || target > matrix[matrix.length - 1][matrix[0].length - 1])
+      return false;
+
+    int[] firstColumn = new int[matrix.length];
+    for (int i = 0; i < firstColumn.length; i++) {
+      firstColumn[i] = matrix[i][0];
+    }
+
+    int index = Arrays.binarySearch(firstColumn, target);
+    if (index >= 0)
+      return true;
+    else {
+
+      int row = -index - 1 - 1;
+      return Arrays.binarySearch(matrix[row], target) >= 0;
+    }
+  }
 
   static int[] binarySearch(int[][] matrix, int row, int cStart, int cEnd, int target) {
     while (cStart <= cEnd) {
@@ -76,5 +99,6 @@ public class SortedMatrixSearch {
         { 7, 8, 9 }
     };
     System.out.println(Arrays.toString(search(arr, 9))); // TC: O(LogN + LogM), SC: O(1)
+    System.out.println(searchMatrix(arr, 9)); // TC: O(LogN + LogM), SC: O(1)
   }
 }
