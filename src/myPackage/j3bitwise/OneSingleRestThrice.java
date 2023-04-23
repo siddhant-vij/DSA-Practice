@@ -1,9 +1,13 @@
+// Generalization: https://leetcode.com/problems/single-number-ii/solutions/43295/detailed-explanation-and-generalization-of-the-bitwise-operation-method-for-single-numbers/
+
+// Leetcode: 137 - Single Number II
+
 package myPackage.j3bitwise;
 
 import java.util.Scanner;
 
 public class OneSingleRestThrice {
-  static void printOneRestThrice(int[] arr){
+  static void printOneRestThrice(int[] arr) {
     for (int k : arr) {
       int count = 0;
       for (int i : arr) {
@@ -14,7 +18,8 @@ public class OneSingleRestThrice {
         System.out.println(k);
     }
   }
-  static int getSingleRestThrice(int[] arr){
+
+  static int getSingleRestThrice(int[] arr) {
     int ones = 0, twos = 0;
     int common_bit_mask;
     for (int j : arr) {
@@ -24,9 +29,10 @@ public class OneSingleRestThrice {
       ones &= common_bit_mask;
       twos &= common_bit_mask;
     }
-    return ones; //Returns those value which appear ONLY once
-//    return twos; //Returns those value which appear ONLY twice
+    return ones; // Returns those value which appear ONLY once
+    // return twos; //Returns those value which appear ONLY twice
   }
+
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
       int N = sc.nextInt();
