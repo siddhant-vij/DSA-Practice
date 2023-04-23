@@ -8,7 +8,7 @@
 1. [Recursion](./src/myPackage/j4recursion/)
 1. [Arrays](./src/myPackage/j5Arrays/)
 1. [Searching](./src/myPackage/j6Searching/)
-1. Sorting
+1. [Sorting](./src/myPackage/j7Sorting/)
 1. [Matrix](./src/myPackage/j8Matrix/)
 1. Hashing
 1. Strings
