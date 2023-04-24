@@ -5,7 +5,16 @@ import java.util.Scanner;
 
 public class CeilingFloor {
 
-  static int floorNumber(int[] arr, int element) {
+  static int floorNumberII(int[] arr, int element) {
+    int index = Arrays.binarySearch(arr, element);
+    if (index < 0) {
+      index = -1 * (index + 1);
+      return index == 0 ? -1 : arr[index - 1];
+    }
+    return arr[index];
+  }
+
+  static int floorNumberI(int[] arr, int element) {
     int s = 0;
     int e = arr.length - 1;
     while (s <= e) {
@@ -23,7 +32,14 @@ public class CeilingFloor {
       return -1;
   }
 
-  static int ceilingNumber(int[] arr, int element) {
+  static int ceilingNumberII(int[] arr, int element) {
+    int index = Arrays.binarySearch(arr, element);
+    if (index < 0)
+      index = -1 * (index + 1);
+    return arr[index];
+  }
+
+  static int ceilingNumberI(int[] arr, int element) {
     int s = 0;
     int e = arr.length - 1;
     while (s <= e) {
@@ -50,8 +66,10 @@ public class CeilingFloor {
       }
       int element = sc.nextInt();
       Arrays.sort(arr);
-      System.out.println(ceilingNumber(arr, element));
-      System.out.println(floorNumber(arr, element));
+      System.out.println(ceilingNumberI(arr, element));
+      System.out.println(ceilingNumberI(arr, element));
+      System.out.println(floorNumberI(arr, element));
+      System.out.println(floorNumberII(arr, element));
     }
   }
 }
