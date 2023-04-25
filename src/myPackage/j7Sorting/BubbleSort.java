@@ -2,6 +2,11 @@
 // Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping
 // the adjacent elements if they are in the wrong order.
 
+// Time Complexity: O(N2)
+// Auxiliary Space: O(1)
+
+// It can be optimized by stopping the algorithm if the inner loop didn’t cause any swap. 
+
 // Bubble sort takes minimum time (Order of n) when elements are already sorted.
 // Hence it is best to check if the array is already sorted or not beforehand, to avoid O(N2) time complexity.
 

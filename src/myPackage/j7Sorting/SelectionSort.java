@@ -6,6 +6,9 @@
 // 1. The subarray which already sorted. 
 // 2. The remaining subarray was unsorted.
 
+// Time Complexity: O(N2)
+// Auxiliary Space: O(1)
+
 // In every iteration of the selection sort, the minimum element (considering ascending order)
 // from the unsorted subarray is picked and moved to the sorted subarray.
 
