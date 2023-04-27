@@ -19,35 +19,27 @@ public class DifferenceArrays {
     int p1 = 0;
     int p2 = 0;
     while (p1 < n1 || p2 < n2) {
+      while (p1 > 0 && p1 < n1 && nums1[p1] == nums1[p1 - 1])
+        p1++;
+      while (p2 > 0 && p2 < n2 && nums2[p2] == nums2[p2 - 1])
+        p2++;
       if (p1 < n1 && p2 < n2) {
         if (nums1[p1] == nums2[p2]) {
           p1++;
           p2++;
-          while (p1 < n1 && nums1[p1] == nums1[p1 - 1])
-            p1++;
-          while (p2 < n2 && nums2[p2] == nums2[p2 - 1])
-            p2++;
         } else if (nums1[p1] < nums2[p2]) {
           uniq1.add(nums1[p1]);
           p1++;
-          while (p1 < n1 && nums1[p1] == nums1[p1 - 1])
-            p1++;
         } else if (nums1[p1] > nums2[p2]) {
           uniq2.add(nums2[p2]);
           p2++;
-          while (p2 < n2 && nums2[p2] == nums2[p2 - 1])
-            p2++;
         }
       } else if (p1 < n1 && p2 >= n2) {
         uniq1.add(nums1[p1]);
         p1++;
-        while (p1 < n1 && nums1[p1] == nums1[p1 - 1])
-          p1++;
       } else if (p1 >= n1 && p2 < n2) {
         uniq2.add(nums2[p2]);
         p2++;
-        while (p2 < n2 && nums2[p2] == nums2[p2 - 1])
-          p2++;
       }
     }
     result.add(uniq1);

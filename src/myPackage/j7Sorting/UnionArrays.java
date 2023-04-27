@@ -18,6 +18,10 @@ public class UnionArrays {
     ArrayList<Integer> result = new ArrayList<>();
     while(p1 < n1 || p2 < n2)
     {
+      while (p1 > 0 && p1 < n1 && arr1[p1] == arr1[p1 - 1])
+        p1++;
+      while (p2 > 0 && p2 < n2 && arr2[p2] == arr2[p2 - 1])
+        p2++;
       if(p1 < n1 && p2 < n2)
       {
         if(arr1[p1] == arr2[p2])
@@ -25,35 +29,23 @@ public class UnionArrays {
           result.add(arr1[p1]);
           p1++;
           p2++;
-          while(p1 < n1 && arr1[p1] == arr1[p1-1])
-            p1++;
-          while(p2 < n2 && arr2[p2] == arr2[p2 - 1])
-            p2++;
         }
         else if (arr1[p1] < arr2[p2])
         {
           result.add(arr1[p1]);
           p1++;
-          while (p1 < n1 && arr1[p1] == arr1[p1 - 1])
-            p1++;
         }
         else if (arr1[p1] > arr2[p2]) {
           result.add(arr2[p2]);
           p2++;
-          while (p2 < n2 && arr2[p2] == arr2[p2 - 1])
-            p2++;
         }
       }
       else if (p1 < n1 && p2 >= n2) {
         result.add(arr1[p1]);
         p1++;
-        while (p1 < n1 && arr1[p1] == arr1[p1 - 1])
-          p1++;
       } else if (p1 >= n1 && p2 < n2) {
         result.add(arr2[p2]);
         p2++;
-        while (p2 < n2 && arr2[p2] == arr2[p2 - 1])
-          p2++;
       }
     }
     return result;
