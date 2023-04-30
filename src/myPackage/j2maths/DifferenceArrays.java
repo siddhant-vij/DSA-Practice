@@ -2,10 +2,48 @@ package myPackage.j2maths;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class DifferenceArrays {
+
+  static int[] arrayDifferenceII(int[] arr1, int[] arr2) {
+    int n1 = arr1.length;
+    int n2 = arr2.length;
+    int p1 = n1 - 1;
+    int p2 = n2 - 1;
+    List<Integer> resL = new ArrayList<>();
+
+    int bin = 0;
+    while (p1 >= 0 || p2 >= 0) {
+      if (p1 >= 0 && p2 >= 0) {
+        if (bin + arr2[p2] - arr1[p1] >= 0) {
+          resL.add(bin + arr2[p2] - arr1[p1]);
+          p2--;
+          p1--;
+          bin = 0;
+        } else {
+          resL.add(bin + arr2[p2] + 10 - arr1[p1]);
+          p2--;
+          p1--;
+          bin = -1;
+        }
+      } else if (p1 < 0 && p2 >= 0) {
+        if (bin + arr2[p2] >= 0) {
+          resL.add(bin + arr2[p2]);
+          p2--;
+          bin = 0;
+        } else {
+          resL.add(bin + arr2[p2] + 10);
+          p2--;
+          bin = -1;
+        }
+      }
+    }
+    Collections.reverse(resL);
+    return removeLeadingZeroes(resL);
+  }
 
   static int[] removeLeadingZeroes(List<Integer> resL) {
     int ind = -1;
@@ -31,7 +69,7 @@ public class DifferenceArrays {
     return result;
   }
 
-  static int[] arrayDifference(int[] arr1, int[] arr2) {
+  static int[] arrayDifferenceI(int[] arr1, int[] arr2) {
     int n1 = arr1.length;
     int n2 = arr2.length;
     int p1 = n1 - 1;
@@ -54,8 +92,15 @@ public class DifferenceArrays {
             arr2[p2]--;
         }
       } else if (p2 >= 0 && p1 < 0) {
-        resL.add(0, arr2[p2]);
-        p2--;
+        if (arr2[p2] >= 0) {
+          resL.add(0, arr2[p2]);
+          p2--;
+        } else {
+          resL.add(0, arr2[p2] + 10);
+          p1--;
+          p2--;
+          arr2[p2]--;
+        }
       }
     }
     return removeLeadingZeroes(resL);
@@ -73,7 +118,8 @@ public class DifferenceArrays {
       for (int i = 0; i < n2; i++) {
         arr2[i] = sc.nextInt();
       }
-      System.out.println(Arrays.toString(arrayDifference(arr1, arr2)));
+      System.out.println(Arrays.toString(arrayDifferenceII(arr1, arr2)));
+      System.out.println(Arrays.toString(arrayDifferenceI(arr1, arr2)));
     }
   }
 }
