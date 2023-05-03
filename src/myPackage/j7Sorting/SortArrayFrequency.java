@@ -5,17 +5,17 @@ package myPackage.j7Sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Pair implements Comparable<Pair> {
+class SortArray implements Comparable<SortArray> {
   int element;
   int count;
 
-  Pair(int element, int count) {
+  SortArray(int element, int count) {
     this.element = element;
     this.count = count;
   }
 
   @Override
-  public int compareTo(Pair other) {
+  public int compareTo(SortArray other) {
     if (this.count > other.count)
       return 1;
     else if (this.count < other.count)
@@ -39,14 +39,14 @@ public class SortArrayFrequency {
     for (int i = 0; i < n; i++)
       count[nums[i] + 100]++;
 
-    Pair[] pairs = new Pair[n];
+    SortArray[] array = new SortArray[n];
     for (int i = 0; i < n; i++)
-      pairs[i] = new Pair(nums[i], count[nums[i] + 100]);
+      array[i] = new SortArray(nums[i], count[nums[i] + 100]);
 
-    Arrays.sort(pairs);
+    Arrays.sort(array);
 
     for (int i = 0; i < n; i++)
-      nums[i] = pairs[i].element;
+      nums[i] = array[i].element;
 
     return nums;
   }
