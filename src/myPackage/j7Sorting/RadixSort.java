@@ -31,18 +31,21 @@ import java.util.ArrayList;
 
 public class RadixSort {
 
-  public static int getDigit(int position, String value, int radix) {
+  public static int getDigitCS(int position, String value, int radix) {
     int nos = value.length() - 1;
-    char c = value.toLowerCase().charAt(nos - position);
-    return (int) c - 'a';
+    char c = value.charAt(nos - position);
+    if (c >= 'A' && c <= 'Z')
+      return (int) c - 'A';
+    else
+      return (int) c - 'a' + 'Z' - 'A' + 1;
   }
 
-  static void countSortString(String[] input, int position, int radix) {
+  static void countSortStringCS(String[] input, int position, int radix) {
     int[] countArray = new int[radix];
     int nos = input.length;
 
     for (String value : input) {
-      countArray[getDigit(position, value, radix)]++;
+      countArray[getDigitCS(position, value, radix)]++;
     }
 
     for (int i = 1; i < radix; i++) {
@@ -52,16 +55,50 @@ public class RadixSort {
     String[] tempArray = new String[nos];
 
     for (int i = nos - 1; i >= 0; i--) {
-      tempArray[--countArray[getDigit(position, input[i], radix)]] = input[i];
+      tempArray[--countArray[getDigitCS(position, input[i], radix)]] = input[i];
     }
     for (int i = 0; i < nos; i++) {
       input[i] = tempArray[i];
     }
   }
 
-  static void radixSortStrings(String[] input) {
+  static void radixSortStringsCaseSensitive(String[] str) {
+    for (int i = 0; i < str[0].length(); i++) {
+      countSortStringCS(str, i, 52);
+    }
+  }
+
+  public static int getDigitCI(int position, String value, int radix) {
+    int nos = value.length() - 1;
+    char c = value.toLowerCase().charAt(nos - position);
+    return (int) c - 'a';
+  }
+
+  static void countSortStringCI(String[] input, int position, int radix) {
+    int[] countArray = new int[radix];
+    int nos = input.length;
+
+    for (String value : input) {
+      countArray[getDigitCI(position, value, radix)]++;
+    }
+
+    for (int i = 1; i < radix; i++) {
+      countArray[i] = countArray[i] + countArray[i - 1];
+    }
+
+    String[] tempArray = new String[nos];
+
+    for (int i = nos - 1; i >= 0; i--) {
+      tempArray[--countArray[getDigitCI(position, input[i], radix)]] = input[i];
+    }
+    for (int i = 0; i < nos; i++) {
+      input[i] = tempArray[i];
+    }
+  }
+
+  static void radixSortStringsCaseInsensitive(String[] input) {
     for (int i = 0; i < input[0].length(); i++) {
-      countSortString(input, i, 26);
+      countSortStringCI(input, i, 26);
     }
   }
 
@@ -165,9 +202,16 @@ public class RadixSort {
     }
     System.out.println();
 
-    String arr[] = { "BCDEF", "dbaqc", "abcde", "bbbbb" };
-    radixSortStrings(arr);
+    String arr[] = { "dbaqc", "abcde", "bbbbb", "BCDEF", "lopiT", "Point" };
+    radixSortStringsCaseInsensitive(arr);
     for (String element : arr) {
+      System.out.print(element + " ");
+    }
+    System.out.println();
+
+    String str[] = { "dbaqc", "abcde", "bbbbb", "BCDEF", "lopiT", "Point" };
+    radixSortStringsCaseSensitive(str);
+    for (String element : str) {
       System.out.print(element + " ");
     }
   }
