@@ -5,17 +5,17 @@ package myPackage.j7Sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Pair implements Comparable<Pair> {
+class FrequentElements implements Comparable<FrequentElements> {
   int element;
   int count;
 
-  Pair(int element, int count) {
+  FrequentElements(int element, int count) {
     this.element = element;
     this.count = count;
   }
 
   @Override
-  public int compareTo(Pair other) {
+  public int compareTo(FrequentElements other) {
     if (other.count > this.count)
       return 1;
     else if (other.count < this.count)
@@ -56,14 +56,14 @@ public class TopKFrequentElements {
   static int[] topKFrequent(int[] nums, int k) {
     int n = nums.length;
     int[] count = countArray(nums);
-    Pair[] pairs = new Pair[n];
+    FrequentElements[] frequentelements = new FrequentElements[n];
     for (int i = 0; i < n; i++)
-      pairs[i] = new Pair(nums[i], count[i]);
+      frequentelements[i] = new FrequentElements(nums[i], count[i]);
 
-    Arrays.sort(pairs); // O(n log n)
+    Arrays.sort(frequentelements); // O(n log n)
 
     for (int i = 0; i < n; i++)
-      nums[i] = pairs[i].element;
+      nums[i] = frequentelements[i].element;
 
     int[] result = new int[k];
     int cur = 0;

@@ -5,19 +5,19 @@ package myPackage.j7Sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Pair implements Comparable<Pair> {
+class ClosestPoints implements Comparable<ClosestPoints> {
   int ptX;
   int ptY;
   int dist;
 
-  Pair(int ptX, int ptY, int dist) {
+  ClosestPoints(int ptX, int ptY, int dist) {
     this.ptX = ptX;
     this.ptY = ptY;
     this.dist = dist;
   }
 
   @Override
-  public int compareTo(Pair other) {
+  public int compareTo(ClosestPoints other) {
     return this.dist - other.dist;
   }
 }
@@ -30,15 +30,15 @@ public class KClosestPtsToOrigin {
     for (int i = 0; i < n; i++)
       dist[i] = points[i][0] * points[i][0] + points[i][1] * points[i][1];
 
-    Pair[] pairs = new Pair[n];
+    ClosestPoints[] closestpoints = new ClosestPoints[n];
     for (int i = 0; i < n; i++)
-      pairs[i] = new Pair(points[i][0], points[i][1], dist[i]);
+      closestpoints[i] = new ClosestPoints(points[i][0], points[i][1], dist[i]);
 
-    Arrays.sort(pairs);
+    Arrays.sort(closestpoints);
     int[][] result = new int[k][2];
     for (int i = 0; i < k; i++) {
-      result[i][0] = pairs[i].ptX;
-      result[i][1] = pairs[i].ptY;
+      result[i][0] = closestpoints[i].ptX;
+      result[i][1] = closestpoints[i].ptY;
     }
     return result;
   }

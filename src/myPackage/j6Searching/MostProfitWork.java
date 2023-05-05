@@ -7,16 +7,16 @@ import java.util.Scanner;
 
 public class MostProfitWork {
 
-  static class Pair implements Comparable<Pair> {
+  static class MaxProfit implements Comparable<MaxProfit> {
     int a1;
     int a2;
 
-    Pair(int a1, int a2) {
+    MaxProfit(int a1, int a2) {
       this.a1 = a1;
       this.a2 = a2;
     }
 
-    public int compareTo(Pair other) {
+    public int compareTo(MaxProfit other) {
       return this.a1 - other.a1;
     }
   }
@@ -47,16 +47,16 @@ public class MostProfitWork {
   }
 
   static int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
-    Pair[] pairs = new Pair[difficulty.length];
-    for (int i = 0; i < pairs.length; i++) {
-      pairs[i] = new Pair(difficulty[i], profit[i]);
+    MaxProfit[] maxprofit = new MaxProfit[difficulty.length];
+    for (int i = 0; i < maxprofit.length; i++) {
+      maxprofit[i] = new MaxProfit(difficulty[i], profit[i]);
     }
-    Arrays.sort(pairs);
+    Arrays.sort(maxprofit);
     for (int i = 0; i < difficulty.length; i++) {
-      difficulty[i] = pairs[i].a1;
+      difficulty[i] = maxprofit[i].a1;
     }
     for (int i = 0; i < profit.length; i++) {
-      profit[i] = pairs[i].a2;
+      profit[i] = maxprofit[i].a2;
     }
 
     Arrays.sort(worker);
