@@ -10,7 +10,7 @@
 1. [Searching](./src/myPackage/j6Searching/)
 1. [Sorting](./src/myPackage/j7Sorting/)
 1. [Matrix](./src/myPackage/j8Matrix/)
-1. Hashing
+1. [Hashing](./src/myPackage/j9Hashing/)
 1. Strings
 1. Linked List
 1. Stack
