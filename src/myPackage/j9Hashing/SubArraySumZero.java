@@ -1,4 +1,5 @@
 // Scaler Practice: Sub-arrays with 0 Sum
+// Problem & Solution can be modified for sum = k
 
 package myPackage.j9Hashing;
 
@@ -9,6 +10,23 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class SubArraySumZero {
+
+  static int longestSubArrayZeroSum(int[] A) {
+    long curSum = 0L;
+    int maxLength = 0;
+    int n = A.length;
+    Map<Long, Integer> map = new HashMap<>();
+    for (int i = 0; i < n; i++) {
+      curSum += A[i];
+      if (curSum == 0)
+        maxLength = Math.max(maxLength, i + 1);
+      else if (map.containsKey(curSum))
+        maxLength = Math.max(maxLength, i - map.get(curSum));
+      else
+        map.put(curSum, i);
+    }
+    return maxLength;
+  }
 
   static int countSubArrayZeroSum(int[] A) {
     int n = A.length;
@@ -51,6 +69,7 @@ public class SubArraySumZero {
       }
       System.out.println(isSubArrayZeroSum(arr));
       System.out.println(countSubArrayZeroSum(arr));
+      System.out.println(longestSubArrayZeroSum(arr));
     }
   }
 }
