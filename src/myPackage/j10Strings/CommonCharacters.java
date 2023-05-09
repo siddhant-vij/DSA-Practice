@@ -1,6 +1,6 @@
 // Leetcode: 1002 - Find Common Characters
 
-package myPackage.j9Hashing;
+package myPackage.j10Strings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
