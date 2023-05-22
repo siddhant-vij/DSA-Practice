@@ -12,7 +12,7 @@
 1. [Matrix](./src/myPackage/j8Matrix/)
 1. [Hashing](./src/myPackage/j9Hashing/)
 1. [Strings](./src/myPackage/j10Strings/)
-1. Linked List
+1. [Linked List](./src/myPackage/j11LinkedList/)
 1. Stack
 1. Queue
 1. Deque
