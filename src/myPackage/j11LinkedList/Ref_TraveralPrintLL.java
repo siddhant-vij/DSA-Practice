@@ -4,7 +4,7 @@ package myPackage.j11LinkedList;
 
 import java.util.Scanner;
 
-public class RecursiveDisplay {
+public class Ref_TraveralPrintLL {
 
   static class Node {
     int val;
@@ -45,7 +45,7 @@ public class RecursiveDisplay {
         tail.next = new Node(sc.nextInt());
         tail = tail.next;
       }
-      RecursiveDisplay obj = new RecursiveDisplay();
+      Ref_TraveralPrintLL obj = new Ref_TraveralPrintLL();
       obj.printListIterative(head);
       obj.printListRecursive(head);
     }
