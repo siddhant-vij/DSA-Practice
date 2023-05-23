@@ -4,7 +4,7 @@ package myPackage.j11LinkedList;
 
 import java.util.Scanner;
 
-public class Ref_TraveralPrintLL {
+public class Ref_TraversalPrintSLL {
 
   static class Node {
     int val;
@@ -45,7 +45,7 @@ public class Ref_TraveralPrintLL {
         tail.next = new Node(sc.nextInt());
         tail = tail.next;
       }
-      Ref_TraveralPrintLL obj = new Ref_TraveralPrintLL();
+      Ref_TraversalPrintSLL obj = new Ref_TraversalPrintSLL();
       obj.printListIterative(head);
       obj.printListRecursive(head);
     }
