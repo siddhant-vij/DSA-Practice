@@ -11,6 +11,14 @@ public class LinearSearch {
     return false;
   }
 
+  static int isPresentIndex(int[] arr, int element, int ptr) {
+    if(ptr == arr.length)
+      return -1;
+    if(arr[ptr] == element)
+      return ptr;
+    return isPresentIndex(arr, element, ptr+1);
+  }
+
   static boolean isPresentRecursive (int[] arr, int n, int start, int end){
     if ((arr[start] == n))
       return true;
@@ -27,6 +35,7 @@ public class LinearSearch {
       int element = sc.nextInt();
       System.out.println(isPresentIterative(arr, element));
       System.out.println(isPresentRecursive(arr, element,0,N-1));
+      System.out.println(isPresentIndex(arr, element, 0));
     }
-  }  
+  } 
 }
