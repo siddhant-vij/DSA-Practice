@@ -32,6 +32,19 @@ public class Ref_TraversalPrintSCLL {
     System.out.println(curNode.val + " --> HEAD");
   }
 
+  void functionPrinting(Node x) {
+    if (x == tail.next)
+      return;
+    functionPrinting(x.next);
+    System.out.print(x.val + " <-- ");
+  }
+
+  void printListReverse() {
+    System.out.print("HEAD <-- ");
+    functionPrinting(tail.next.next);
+    System.out.print(tail.next.val);
+  }
+
   public static void main(String args[]) {
     try (Scanner sc = new Scanner(System.in)) {
       int n = sc.nextInt();
@@ -51,6 +64,7 @@ public class Ref_TraversalPrintSCLL {
         tail.next = head;
       Ref_TraversalPrintSCLL obj = new Ref_TraversalPrintSCLL();
       obj.printList();
+      obj.printListReverse();
     }
   }
 }
