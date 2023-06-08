@@ -51,7 +51,7 @@ public class MergeSortedLists {
     System.out.println("null");
   }
 
-  ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+  ListNode mergeTwoListsExtraSpace(ListNode list1, ListNode list2) {
     ListNode ptr1 = list1;
     ListNode ptr2 = list2;
     while (ptr1 != null || ptr2 != null) {
@@ -79,6 +79,38 @@ public class MergeSortedLists {
     return head;
   }
 
+  ListNode mergeTwoListsNoExtraSpace(ListNode list1, ListNode list2) {
+    if (list1 == null)
+      return list2;
+    if (list2 == null)
+      return list1;
+    ListNode head = null, tail = null;
+    ListNode ptr1 = list1, ptr2 = list2;
+    if (ptr1.val <= ptr2.val) {
+      head = tail = ptr1;
+      ptr1 = ptr1.next;
+    } else {
+      head = tail = ptr2;
+      ptr2 = ptr2.next;
+    }
+    while (ptr1 != null && ptr2 != null) {
+      if (ptr1.val <= ptr2.val) {
+        tail.next = ptr1;
+        tail = tail.next;
+        ptr1 = ptr1.next;
+      } else {
+        tail.next = ptr2;
+        tail = tail.next;
+        ptr2 = ptr2.next;
+      }
+    }
+    if (ptr1 == null)
+      tail.next = ptr2;
+    else
+      tail.next = ptr1;
+    return head;
+  }
+
   public static void main(String args[]) {
     try (Scanner sc = new Scanner(System.in)) {
       int n = sc.nextInt();
@@ -92,7 +124,8 @@ public class MergeSortedLists {
         obj2.insertAtEnd(sc.nextInt());
       }
       MergeSortedLists obj3 = new MergeSortedLists();
-      obj3.printList(obj3.mergeTwoLists(obj1.head, obj2.head));
+      obj3.printList(obj3.mergeTwoListsExtraSpace(obj1.head, obj2.head));
+      obj3.printList(obj3.mergeTwoListsNoExtraSpace(obj1.head, obj2.head));
     }
   }
 }
