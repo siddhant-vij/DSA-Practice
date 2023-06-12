@@ -1,54 +1,46 @@
-// Stack Implementataion: Arrays
+// Stack Implementataion: ArrayList
 
 package myPackage.j12Stack;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StackClassWithArrays {
+public class StackClassWithArrayList {
 
-  int[] arr;
-  int top;
+  ArrayList<Integer> list;
 
-  StackClassWithArrays(int n) {
-    arr = new int[n];
-    top = -1;
+  StackClassWithArrayList() {
+    list = new ArrayList<>();
   }
 
   void push(int val) {
-    if (isFull()) {
-      System.out.println("Stack Overflow");
-      return;
-    }
-    top++;
-    arr[top] = val;
+    list.add(val);
   }
 
   int pop() {
     if (isEmpty()) {
-      System.out.println("Stack Underflow");
+      System.out.println("Stack Empty");
       return Integer.MAX_VALUE;
     }
-    int val = arr[top];
-    top--;
+    int val = list.get(list.size() - 1);
+    list.remove(list.size() - 1);
     return val;
   }
 
   int size() {
-    return (top + 1);
+    return list.size();
   }
 
   int peek() {
-    if (isEmpty())
+    if (isEmpty()) {
+      System.out.println("Stack Empty");
       return Integer.MAX_VALUE;
-    return arr[top];
+    }
+    return list.get(list.size() - 1);
   }
 
   boolean isEmpty() {
-    return top == -1;
-  }
-
-  boolean isFull() {
-    return top == arr.length - 1;
+    return list.isEmpty();
   }
 
   void print() {
@@ -56,26 +48,26 @@ public class StackClassWithArrays {
       System.out.println("Stack Empty");
       return;
     }
-    for (int i = top; i >= 0; i--) {
-      System.out.print(arr[i] + " ");
+    for (int i = list.size() - 1; i >= 0; i--) {
+      System.out.print(list.get(i) + " ");
     }
     System.out.println();
   }
 
   public static void main(String args[]) {
     try (Scanner sc = new Scanner(System.in)) {
-      StackClassWithArrays st = new StackClassWithArrays(3);
+      StackClassWithArrayList st = new StackClassWithArrayList();
       // System.out.println(st.pop());
       st.push(1);
       st.push(2);
       st.push(3);
-      // st.push(4);
+      st.push(4);
       System.out.println(st.size());
       st.print();
       System.out.println(st.pop());
       System.out.println(st.pop());
       st.print();
-      st.push(4);
+      st.push(5);
       System.out.println(st.size());
       st.print();
     }
