@@ -13,9 +13,9 @@
 1. [Hashing](./src/myPackage/j9Hashing/)
 1. [Strings](./src/myPackage/j10Strings/)
 1. [Linked List](./src/myPackage/j11LinkedList/)
-1. Stack
-1. Queue
-1. Deque
+1. [Stack](./src/myPackage/j12Stack/)
+1. [Queue](./src/myPackage/j13Queue/)
+1. [Deque](./src/myPackage/j14Deque/)
 1. Tree
 1. Binary Search Tree
 1. Heap
