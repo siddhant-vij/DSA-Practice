@@ -1,62 +1,77 @@
-// Stack Implementation: ArrayList
+// Stack Implementation: Singly Linked List
 
 package myPackage.j12Stack;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StackClassWithArrayList {
+public class StackClassSinglyLinkedList {
 
-  ArrayList<Integer> list;
+  Node top;
+  int size;
 
-  StackClassWithArrayList() {
-    list = new ArrayList<>();
+  class Node {
+    int val;
+    Node next;
+
+    Node(int val) {
+      this.val = val;
+      size++;
+    }
+  }
+
+  StackClassSinglyLinkedList() {
+    size = 0;
   }
 
   void push(int val) {
-    list.add(val);
+    Node newNode = new Node(val);
+    newNode.next = top;
+    top = newNode;
   }
 
   int pop() {
     if (isEmpty()) {
-      System.out.println("Stack Empty");
+      System.out.println("Empty Stack");
       return Integer.MAX_VALUE;
     }
-    int val = list.get(list.size() - 1);
-    list.remove(list.size() - 1);
+    int val = top.val;
+    top = top.next;
+    size--;
     return val;
   }
 
   int size() {
-    return list.size();
+    return size;
   }
 
   int peek() {
     if (isEmpty()) {
-      System.out.println("Stack Empty");
+      System.out.println("Empty Stack");
       return Integer.MAX_VALUE;
     }
-    return list.get(list.size() - 1);
+    return top.val;
   }
 
   boolean isEmpty() {
-    return list.isEmpty();
+    return top == null;
   }
 
   void print() {
     if (isEmpty()) {
-      System.out.println("Stack Empty");
+      System.out.println("Empty Stack");
       return;
     }
-    for (int i = list.size() - 1; i >= 0; i--) {
-      System.out.print(list.get(i) + " ");
+    Node cur = top;
+    while (cur != null) {
+      System.out.print(cur.val + " ");
+      cur = cur.next;
     }
     System.out.println();
   }
 
   public static void main(String args[]) {
     try (Scanner sc = new Scanner(System.in)) {
-      StackClassWithArrayList st = new StackClassWithArrayList();
+      StackClassSinglyLinkedList st = new StackClassSinglyLinkedList();
       // System.out.println(st.pop());
       st.push(1);
       st.push(2);
@@ -67,9 +82,11 @@ public class StackClassWithArrayList {
       System.out.println(st.pop());
       System.out.println(st.pop());
       st.print();
-      st.push(5);
       System.out.println(st.size());
+      st.push(5);
       st.print();
+      System.out.println(st.size());
     }
   }
+
 }

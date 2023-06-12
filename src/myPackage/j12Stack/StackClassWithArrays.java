@@ -1,4 +1,4 @@
-// Stack Implementataion: Arrays
+// Stack Implementation: Arrays
 
 package myPackage.j12Stack;
 
