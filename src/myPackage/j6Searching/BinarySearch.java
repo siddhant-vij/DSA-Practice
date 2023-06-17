@@ -1,4 +1,4 @@
-package myPackage.j1basics;
+package myPackage.j6Searching;
 
 import java.util.Arrays;
 

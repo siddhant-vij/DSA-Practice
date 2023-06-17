@@ -1,10 +1,10 @@
 // Leetcode: 151 - Reverse Words in a String
 
-package myPackage.j1basics;
+package myPackage.j10Strings;
 
 import java.util.Scanner;
 
-public class ReverseWords {
+public class ReverseWordsLC {
 
   static String reverseWords(String s) {
     s = s.trim();

@@ -1,4 +1,4 @@
-package myPackage.j1basics;
+package myPackage.j10Strings;
 
 import java.util.Scanner;
 
