@@ -144,7 +144,7 @@ record MyCycle(int speed) implements Bicycle, Lights, Horns {
     }
 }
 
-public class AbstractInterface {
+public class OopsAbstractInterface {
     public static void main(String[] args) {
         /*
          * Square S = new Square(5);

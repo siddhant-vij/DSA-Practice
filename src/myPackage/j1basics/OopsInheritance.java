@@ -26,7 +26,7 @@ class Manager extends Employee{
     }
 }
 
-public class InheritanceClass {
+public class OopsInheritance {
     public static void main(String[] args) {
         Employee emp = new Employee(265000,"Test Employee");
         System.out.println("Employee Name: " + emp.getName());

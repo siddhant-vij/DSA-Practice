@@ -83,7 +83,7 @@ class ScienceFiction extends Movie {
   }
 }
 
-public class FactoryMethod {
+public class OopsFactoryMethod {
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
       // Movie theMovie = Movie.getMovie("Science", "Star Wars");

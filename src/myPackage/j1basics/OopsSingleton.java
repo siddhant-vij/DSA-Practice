@@ -20,7 +20,7 @@ class Singleton {
   }
 }
 
-public class SingletonClass {
+public class OopsSingleton {
 
   public static void main(String args[]) {
     Singleton x = Singleton.getInstance();
