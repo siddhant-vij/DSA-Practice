@@ -36,8 +36,6 @@ public class SubsequenceWWoDups {
 
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
-      // int x = sc.nextInt();
-      // System.out.println("Hello World " + x);
       // String str = "abcde";
       // subsequences(str, 0, "");
       // System.out.println(result);
