@@ -16,9 +16,9 @@
 1. [Stack](./src/myPackage/j12Stack/)
 1. [Queue](./src/myPackage/j13Queue/)
 1. [Deque](./src/myPackage/j14Deque/)
-1. Tree
-1. Binary Search Tree
-1. Heap
+1. [Tree](./src/myPackage/j15Tree/)
+1. [Binary Search Tree](./src/myPackage/j16BinarySearchTree/)
+1. [Heap](./src/myPackage/j17Heap/)
 1. Graph
 1. Greedy
 1. Backtracking
