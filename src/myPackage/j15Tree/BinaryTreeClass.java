@@ -26,7 +26,9 @@
 
 package myPackage.j15Tree;
 
-class Node {
+public class BinaryTreeClass {
+
+  static class Node {
   int val;
   Node left;
   Node right;
@@ -35,8 +37,6 @@ class Node {
     this.val = val;
   }
 }
-
-public class BinaryTreeClass {
   public static void main(String[] args) {
     // Dynamic Node Representation (Linked Representation)
     Node root = new Node(10);
