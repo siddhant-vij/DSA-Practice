@@ -22,6 +22,7 @@ class DequeCircularArray {
       System.out.println("Queue is full");
       return;
     }
+    this.size++;
     if (isEmpty()) {
       this.front = 0;
       this.rear = 0;
@@ -40,6 +41,7 @@ class DequeCircularArray {
       System.out.println("Queue is full");
       return;
     }
+    this.size++;
     if (isEmpty()) {
       this.front = 0;
       this.rear = 0;
@@ -58,6 +60,7 @@ class DequeCircularArray {
       return Integer.MIN_VALUE;
     }
     int item = this.arr[this.front];
+    this.size--;
     if (this.front == this.rear) {
       this.front = -1;
       this.rear = -1;
@@ -76,6 +79,7 @@ class DequeCircularArray {
       return Integer.MIN_VALUE;
     }
     int item = this.arr[this.rear];
+    this.size--;
     if (this.front == this.rear) {
       this.front = -1;
       this.rear = -1;
