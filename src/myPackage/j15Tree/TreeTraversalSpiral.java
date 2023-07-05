@@ -2,8 +2,10 @@
 
 package myPackage.j15Tree;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -51,7 +53,7 @@ public class TreeTraversalSpiral {
     return root;
   }
 
-  static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+  static List<List<Integer>> zigzagLevelOrderI(TreeNode root) {
     if (root == null) {
       return new ArrayList<>();
     }
@@ -91,11 +93,50 @@ public class TreeTraversalSpiral {
     return result;
   }
 
+  static List<List<Integer>> zigzagLevelOrderII(TreeNode root) {
+    if (root == null)
+      return new ArrayList<>();
+    Deque<TreeNode> s1 = new ArrayDeque<TreeNode>();
+    Deque<TreeNode> s2 = new ArrayDeque<TreeNode>();
+    List<List<Integer>> result = new ArrayList<>();
+    s1.push(root);
+    while (!s1.isEmpty() || !s2.isEmpty()) {
+      List<Integer> list = new ArrayList<>();
+      boolean test = false;
+      while (!s1.isEmpty()) {
+        test = true;
+        TreeNode temp = s1.pop();
+        list.add(temp.val);
+        if (temp.left != null)
+          s2.push(temp.left);
+        if (temp.right != null)
+          s2.push(temp.right);
+      }
+      if (test)
+        result.add(list);
+      list = new ArrayList<>();
+      test = false;
+      while (!s2.isEmpty()) {
+        test = true;
+        TreeNode temp = s2.pop();
+        list.add(temp.val);
+        if (temp.right != null)
+          s1.push(temp.right);
+        if (temp.left != null)
+          s1.push(temp.left);
+      }
+      if(test)
+        result.add(list);
+    }
+    return result;
+  }
+
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
       String str = sc.nextLine();
       TreeNode root = buildTree(str);
-      System.out.println(zigzagLevelOrder(root));
+      System.out.println(zigzagLevelOrderI(root));
+      System.out.println(zigzagLevelOrderII(root));
     }
   }
 }
