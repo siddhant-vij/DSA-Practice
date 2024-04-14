@@ -1,6 +1,6 @@
 // Leetcode: 151 - Reverse Words in a String
 
-package myPackage.j1basics;
+package myPackage.j1Basics;
 
 import java.util.Scanner;
 

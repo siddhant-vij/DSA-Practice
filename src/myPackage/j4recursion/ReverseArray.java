@@ -1,4 +1,4 @@
-package myPackage.j4recursion;
+package myPackage.j4Recursion;
 
 import java.util.Arrays;
 import java.util.Collections;

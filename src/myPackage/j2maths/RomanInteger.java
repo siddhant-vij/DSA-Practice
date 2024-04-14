@@ -1,7 +1,7 @@
 // Leetcode 13: Roman to Integer
 // Leetcode 12: Integer to Roman
 
-package myPackage.j2maths;
+package myPackage.j2Maths;
 
 import java.util.Scanner;
 

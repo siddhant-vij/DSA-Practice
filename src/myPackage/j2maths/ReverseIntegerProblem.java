@@ -1,6 +1,6 @@
 // Leetcode 7: Reverse Integer
 
-package myPackage.j2maths;
+package myPackage.j2Maths;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package myPackage.j1basics;
+package myPackage.j1Basics;
 
 // import java.io.File;
 // import java.io.FileNotFoundException;

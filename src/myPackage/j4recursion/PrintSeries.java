@@ -6,7 +6,7 @@
 // For  N = 5 , K = 2 
 // Series = [ 5, 3, 1, -1, 1, 3, 5]
 
-package myPackage.j4recursion;
+package myPackage.j4Recursion;
 
 import java.util.ArrayList;
 import java.util.Scanner;

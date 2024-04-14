@@ -1,6 +1,6 @@
 // Leetcode: 2429 - Minimize XOR
 
-package myPackage.j3bitwise;
+package myPackage.j3Bitwise;
 
 import java.util.Scanner;
 

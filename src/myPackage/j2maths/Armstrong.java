@@ -1,4 +1,4 @@
-package myPackage.j2maths;
+package myPackage.j2Maths;
 
 public class Armstrong {
   public static boolean isArmstrong(int n){

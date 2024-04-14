@@ -1,4 +1,4 @@
-package myPackage.j1basics;
+package myPackage.j1Basics;
 
 public class StringTest {
     public static void main(String[] args) {

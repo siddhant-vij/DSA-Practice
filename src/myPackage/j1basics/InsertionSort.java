@@ -1,4 +1,4 @@
-package myPackage.j1basics;
+package myPackage.j1Basics;
 
 public class InsertionSort {
     public static void insertionSort(int[] x){

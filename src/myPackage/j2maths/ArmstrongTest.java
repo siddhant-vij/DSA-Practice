@@ -2,7 +2,7 @@
 // 1.junit-4.13.2.jar
 // 2. hamcrest-core-1.3.jar
 
-package myPackage.j2maths;
+package myPackage.j2Maths;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

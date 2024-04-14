@@ -1,7 +1,7 @@
 // Leetcode: 2220 - Minimum Bit Flips to Convert Number
 // Leetcode: 1318 - Minimum Flips to Make a OR b Equal to c
 
-package myPackage.j3bitwise;
+package myPackage.j3Bitwise;
 
 import java.util.Scanner;
 

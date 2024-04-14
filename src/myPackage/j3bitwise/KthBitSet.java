@@ -1,4 +1,4 @@
-package myPackage.j3bitwise;
+package myPackage.j3Bitwise;
 
 import java.util.Scanner;
 

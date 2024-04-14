@@ -1,4 +1,4 @@
-package myPackage.j1basics;
+package myPackage.j1Basics;
 
 //Take care to create - toString(), hashCode() & equals() method implementation for classes
 
